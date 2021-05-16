@@ -2,17 +2,20 @@
 
 UInt8 ReverseInteger(UInt8 n)
 {
-    unsigned int  numberOfBits = sizeof(n) * 8;
-    unsigned int reverseNum = 0, i, temp;
-      
-    for (i = 0; i < numberOfBits; i++)
+    @autoreleasepool
     {
-        temp = (n & (1 << i));
-        if(temp)
+        unsigned int  numberOfBits = sizeof(n) * 8;
+        unsigned int reverseNum = 0, i, temp;
+          
+        for (i = 0; i < numberOfBits; i++)
         {
-            reverseNum |= (1 << ((numberOfBits - 1) - i));
+            temp = (n & (1 << i));
+            if(temp)
+            {
+                reverseNum |= (1 << ((numberOfBits - 1) - i));
+            }
         }
+           
+        return reverseNum;
     }
-       
-    return reverseNum;
 }
