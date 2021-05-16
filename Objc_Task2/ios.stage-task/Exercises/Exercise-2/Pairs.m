@@ -22,11 +22,14 @@
         {
             for(int k = size - 1; k >= 0; k--)
             {
-                int difference = arrayOfInt[j] - arrayOfInt[k];
-                
-                if(difference == differValue)
+                if(j != k)
                 {
-                    count++;
+                    int difference = arrayOfInt[j] - arrayOfInt[k];
+                
+                    if(difference == differValue)
+                    {
+                        count++;
+                    }
                 }
             }
         }
