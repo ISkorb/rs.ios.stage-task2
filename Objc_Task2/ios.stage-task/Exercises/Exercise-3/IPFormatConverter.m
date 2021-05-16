@@ -14,7 +14,7 @@
             {
                 int currentValue = [(NSNumber *)[numbersArray objectAtIndex:i] intValue];
                 
-                if(currentValue >= 255)
+                if(currentValue > 255)
                 {
                     return @"The numbers in the input array can be in the range from 0 to 255.";
                 }
